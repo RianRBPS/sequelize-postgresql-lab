@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('crud', 'root', 'password', {
+const sequelize = new Sequelize('postgres', 'rian', 'admin', {
     dialect: 'postgres',
     host: 'localhost',
-    port: 3306
+    logging: console.log,
 })
 
 module.exports = sequelize;

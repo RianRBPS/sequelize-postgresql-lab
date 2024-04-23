@@ -2,6 +2,12 @@
 
     const database = require("./db");
     const Produto = require("./product");
-    await database.sync();
+
+    try {
+        await database.sync();
+        console.log("Database synchronized succesfully.");
+    } catch (error) {
+        console.error("Failed to synchronized database:", error);
+    }
 
 })();
